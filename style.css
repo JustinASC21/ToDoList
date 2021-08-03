@@ -1,3 +1,21 @@
+body {
+    background-color: lightcyan;
+}
 h1 {
-    
+    color:cyan;
+    text-align: center;
+}
+h4 {
+    font-size: 20px;
+    padding-left: 20px;
+    color: darkblue;
+    border-bottom: grey 2px solid;
+}
+button {
+    background-color: darkgoldenrod;
+    color: white;
+    font-size: 18px;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    border-radius: 12px;
 }
