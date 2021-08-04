@@ -19,3 +19,16 @@ button {
     font-weight: bold;
     border-radius: 12px;
 }
+li {
+    font-size: 18px;
+    font-weight: bold;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border-bottom: grey 2px solid;
+    border-top: grey 2px solid;
+    margin-bottom: 5px;
+
+}
+li:hover {
+    background-color: lightgrey;
+    opacity: 0.4;
+}

@@ -38,13 +38,9 @@ event.preventDefault();
     additionalRow.append(string);
 
     // style each row for todoList
-    additionalRow.style.fontSize = "18px";
-    additionalRow.style.borderBottom = "grey solid 2px";
-    additionalRow.style.borderTop = "grey solid 2px";
-    additionalRow.style.marginBottom = "5px";
     additionalRow.style.color = "rgb("+r+","+g+","+b+")";
     // append our additional row in the list into the DOM, we add the element in the parent node 'ol' at the end
-    list.append(additionalRow);
+    list.appendChild(additionalRow);
     todoList.push(string);
 
     inputText.value = "";
@@ -67,4 +63,19 @@ removeButton.onclick = function(event) {
     }
 
     numberInputText.value = "";
+}
+list.onmouseover = function(event) {
+    event.preventDefault();
+    // returns the array of all the li elements
+    let rowList = document.querySelectorAll('li');
+
+    // loop through each and check if item has been clicked
+    for (let i = 0; i < todoList.length + 1; i++) {
+        rowList[i].onclick = function(event) {
+            event.preventDefault();
+            rowList[i].style.textDecoration = "line-through";
+            rowList[i].style.textDecorationThickness = "5px";
+        }
+    }
+
 }
